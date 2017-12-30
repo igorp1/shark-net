@@ -16,7 +16,6 @@ var node_config = {
 var map;
 var nodes = [];
 
-
 function initMap() {
 
     var uluru = {lat: 42.349359, lng: -71.098096};
@@ -334,9 +333,6 @@ function initMap() {
             }
           ]
     });
-    // var noPoi = [];
-    
-    // map.setOptions({styles: noPoi});    
 
     map.addListener('click', function(e) {
         
@@ -353,8 +349,6 @@ function addNewNodeAt(latLng){
     nodes.push( NodeFactory(nodeType, latLng) );
 
 }
-
-
 
 function NodeFactory(type, position){
 
