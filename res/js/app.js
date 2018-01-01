@@ -6,9 +6,9 @@ var node_config = {
         "user" :            "#D14724"
     },
     icons : {
-        "free net node" :   "https://cdn.pixabay.com/photo/2014/04/03/10/03/google-309739_1280.png",
-        "wired net node" :  "https://cdn.pixabay.com/photo/2014/04/03/10/03/google-309741_1280.png",
-        "user" :            "https://cdn.pixabay.com/photo/2014/04/03/10/03/google-309740_1280.png"
+        "free net node" :   "res/assets/map_marker_blue.png",
+        "wired net node" :  "res/assets/map_marker_green.png",
+        "user" :            "res/assets/map_marker_red.png"
     }
 };
 
@@ -362,8 +362,7 @@ function NodeFactory(type, position){
     var node = Object.create(Node);
 
     // generate node id
-    var randomID_length = 3;
-    node.id = Math.round((Math.pow(36, randomID_length + 1) - Math.random() * Math.pow(36, randomID_length))).toString(36).slice(1);
+    node.id = generateID();
 
     // set position
     node.latLng = position;
@@ -393,4 +392,10 @@ function NodeFactory(type, position){
 
     return node;
 
+}
+
+// helpers 
+function generateID(idLength){
+  idLength = idLength === undefined ? 3 : idLength; 
+  return Math.round((Math.pow(36, idLength + 1) - Math.random() * Math.pow(36, idLength))).toString(36).slice(1).toUpperCase();
 }
