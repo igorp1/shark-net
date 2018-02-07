@@ -1,0 +1,26 @@
+{
+  "name": "shark-net",
+  "version": "1.0.0",
+  "description": "shark-net is a platform to demonstrate and simulate the capabilities of a fully independent computer network to provide quality internet and decentralized services.  ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p",
+    "start": "webpack-dev-server --output-public-path=/build/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "google-maps": "^3.2.1"
+  }
+}

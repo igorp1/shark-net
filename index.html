@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-        <title>SharkNet</title>
-        
-        <!-- metas -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-        <!-- imports -->
-        <link rel="stylesheet" type="text/css" href="res/css/styles.css">
-        
-        <link rel="mask-icon" href="https://image.flaticon.com/icons/svg/85/85096.svg" color="#3880F2">
-        <link rel="apple-touch-icon" href="https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/118/shark_1f988.png">
+<head>
+  
+  <title>shark-net</title>
 
-    </head>
-    <body class="main-container">
+  <!-- metas -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <h1>🦈 Shark Net</h1>
-        <h3>The goal here is to simulate how shark net will work. <br>Change the options below to interact with the simulation.</h3>
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-        <div id="map-container">
-            <div id="map"></div>
+  <!-- iOS and Android eye candy -->
+  <link rel="icon" sizes="192x192" href="icon_image.png">
+  <link rel="apple-touch-icon" href="icon_image.png">
+  <link rel="mask-icon" href="icon_image.svg" color="#color">
+  
+</head>
+  <body>
+    <div id="main-container">
+
+        <!-- Placeholders for title and description -->
+        <h1>🦈 shark-net</h1>
+        <p>shark-net is a platform to demonstrate and simulate the capabilities of a fully independent computer network to provide quality internet and decentralized services.  </p>
+
+        <!-- REACTIVE COLUMNS FOR LAYOUT -->
+        <!-- https://purecss.io/ -->
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-1-1 pure-u-lg-1-1">
+                <div id="map-container">
+                    <div id="map"></div>
+                </div>
+                
+                Pick node type:
+                <select id="node-type-selector">
+                    <option>free net node</option>
+                    <option>wired net node</option>
+                    <option>user</option>
+                </select>
+            </div>
         </div>
 
-        Pick node type:
-        <select id="node-type-selector">
-            <option>free net node</option>
-            <option>wired net node</option>
-            <option>user</option>
-        </select>
+    </div>
 
-
-        
-    </body>
+  </body>
 </html>
-<!-- javascript -->
-<script src="res/js/app.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnnVXCEeSYPXN1BygeHVXYfxSve83Yfzc&callback=initMap"></script>
+<script src="build/app.bundle.js"></script>
